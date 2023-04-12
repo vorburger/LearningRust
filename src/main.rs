@@ -1,3 +1,7 @@
+
+mod library;
+use library::print_books;
+
 #[allow(unused_variables)]
 fn main() {
     println!("hello, world");
@@ -63,6 +67,10 @@ fn main() {
         println!("{x} * {s} = {}", multiply(x.into(), i)); // into() for i8 to i16 type conversion
     }
     println!("{}", multiply_number_and_string(15, "3").unwrap());
+
+    // https://google.github.io/comprehensive-rust/exercises/day-1/book-library.html
+    // library::print_books(); or, with the use library::print_books; on top, just:
+    print_books();
 
 }
 
