@@ -12,4 +12,6 @@ Install Rust using https://rustup.rs (into `~/.rustup` and `~/.cargo`; uninstall
 
 `std` lib docs [such as this](https://doc.rust-lang.org/std/macro.print.html) are fun to browse through.
 
+`cargo doc --document-private-items` generates `target/doc/help.html`.
+
 [Compiler Explorer](https://godbolt.org) shows generated assembly instructions.
