@@ -1,4 +1,3 @@
-
 mod library;
 use library::print_books;
 
@@ -20,8 +19,8 @@ fn main() {
     let j = 1u8;
 
     // Strings
-    let string : &str = "Hi 🥰";
-    let byte_string : &[u8] = b"ASCII only!"; // cannot contain 🥰
+    let string: &str = "Hi 🥰";
+    let byte_string: &[u8] = b"ASCII only!"; // cannot contain 🥰
 
     // Arrays (fixed size; use Vector for auto-growing)
     let three_fixed_ints = [42; 3];
@@ -35,7 +34,7 @@ fn main() {
 
     // Mutable Variables
     // (All variables above are implicitly immutable, like C++ "const" or Java "final".)
-    let mut two_ints =  [43; 17];
+    let mut two_ints = [43; 17];
     two_ints[1] = 9;
 
     // Tuples
@@ -71,7 +70,6 @@ fn main() {
     // https://google.github.io/comprehensive-rust/exercises/day-1/book-library.html
     // library::print_books(); or, with the use library::print_books; on top, just:
     print_books();
-
 }
 
 // Everything is private by default, `pub` makes it public.
