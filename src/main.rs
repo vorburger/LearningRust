@@ -22,8 +22,8 @@ fn main() {
     // Arrays (fixed size; use Vector for auto-growing)
     let three_fixed_ints = [42; 3];
     // NOK: println!("{}", three_fixed_ints);
-    println!(":? {:?}", three_fixed_ints);
-    println!(":#? {:#?}", three_fixed_ints);
+    println!(":? {three_fixed_ints:?}");
+    println!(":#? {three_fixed_ints:#?}");
 
     // Array Type includes size!
     let three_moar_fixed_ints: [i32; 3] = three_fixed_ints;
@@ -36,11 +36,17 @@ fn main() {
 
     // Tuples
     let t: (i8, bool, usize) = (7, true, 9);
-    println!("{:?}", t);
+    println!("t: {t:?}");
     println!("Tuple #1st element is {}", t.0);
 
     // Structs, incl. methods on structs (OOP?)
     // see https://google.github.io/comprehensive-rust/basic-syntax/methods.html
+    #[derive(Copy, Clone, Debug)]
+    struct Point(i32, i32);
+    let p1 = Point(3, 4);
+    println!("p1: {p1:?}"); // :? requires Debug
+    let p2 = p1; // This requires Copy
+    let x = p2.0;
 
     // Call function
     println!("{}", greet("world"));
@@ -48,7 +54,8 @@ fn main() {
     // https://google.github.io/comprehensive-rust/exercises/day-1/implicit-conversions.html
     let x: i8 = 15;
     let y: i16 = 1000;
-    println!("{x} * {y} = {}", multiply(x.into(), y)); // into() for i8 to i16 type conversion
+    let m = multiply(x.into(), y); // into() for i8 to i16 type conversion
+    println!("{x} * {y} = {m}");
 
     // String to Integer Type Conversion with cool fancy pattern matching!
     let s = "3";
