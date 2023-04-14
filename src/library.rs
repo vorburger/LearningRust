@@ -31,7 +31,7 @@ impl std::fmt::Display for Book {
 
 impl Library {
     fn new() -> Library {
-        unimplemented!()
+        Library { books: Vec::new() }
     }
 
     //fn len(self) -> usize {

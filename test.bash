@@ -1,1 +1,1 @@
-clear; cargo fmt && cargo clippy && cargo test && cargo run
+cargo fmt && cargo clippy && cargo test && cargo run

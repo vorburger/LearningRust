@@ -4,7 +4,7 @@ mod library;
 mod health_statistics;
 mod health_statistics_pub;
 
-mod geometry;
+// TODO mod geometry;
 
 #[allow(unused_variables)]
 fn main() {
