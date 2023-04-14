@@ -18,12 +18,9 @@ pub fn luhn(cc_number: &str) -> bool {
         return false;
     }
 
-    // https://stackoverflow.com/a/38083610
-    let reverse = valid_cc_number.chars().rev().collect::<String>();
-
     let mut sum = 0;
     let mut double = false;
-    for char in reverse.chars() {
+    for char in valid_cc_number.chars().rev() {
         let mut n = char.to_digit(10).unwrap();
         if double {
             n *= 2;
