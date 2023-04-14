@@ -10,6 +10,7 @@ Install Rust using https://rustup.rs (into `~/.rustup` and `~/.cargo`; uninstall
 * `cargo new LearningRust` to create the initial files
 * `cargo run` will run the [`main.rs`](src/main.rs).
 * `cargo fmt` will run [`rustfmt`](https://github.com/rust-lang/rustfmt) (but you should [make your IDE do this on Save](https://github.com/vorburger/vorburger-dotfiles-bin-etc/commit/0a76bfe249a20980a7297e3aaeb5aaad951b035a))
+* `cargo test` will run tests
 * `cargo clippy` will run the [Clippy](https://github.com/rust-lang/rust-clippy) linter
 * `cargo doc --document-private-items` generates `target/doc/help.html`
 
