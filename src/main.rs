@@ -6,6 +6,8 @@ mod health_statistics_pub;
 
 // TODO mod geometry;
 
+mod luhn;
+
 #[allow(unused_variables)]
 fn main() {
     println!("hello, world");
