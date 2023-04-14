@@ -29,18 +29,7 @@ pub fn luhn(cc_number: &str) -> bool {
             n *= 2;
         }
         if n > 9 {
-            match n {
-                10 => n = 1,
-                11 => n = 2,
-                12 => n = 3,
-                13 => n = 4,
-                14 => n = 5,
-                15 => n = 6,
-                16 => n = 7,
-                17 => n = 8,
-                18 => n = 9,
-                _ => (),
-            }
+            n -= 9;
         }
         sum += n;
         double = !double;
