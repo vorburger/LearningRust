@@ -4,6 +4,8 @@ mod library;
 mod health_statistics;
 mod health_statistics_pub;
 
+mod geometry;
+
 #[allow(unused_variables)]
 fn main() {
     println!("hello, world");
@@ -12,9 +14,9 @@ fn main() {
 
     // Variables
     // Note the type inference for foo!
-    let foo = 1;
-    println!("foo is {}", foo);
-    println!("foo is {foo}");
+    let first_var = 1;
+    println!("first_var is {}", first_var);
+    println!("first_var is {first_var}");
 
     // Types
     // https://google.github.io/comprehensive-rust/basic-syntax/scalar-types.html

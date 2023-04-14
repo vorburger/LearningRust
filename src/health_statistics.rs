@@ -12,11 +12,7 @@ struct User {
 impl User {
     // new() is just a convention, not a fixed keyword
     pub fn new(name: String, age: u32, weight: f32) -> Self {
-        User {
-            name: name,
-            age: age,
-            weight: weight,
-        }
+        User { name, age, weight }
     }
 
     pub fn name(&self) -> &str {
