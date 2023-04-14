@@ -2,6 +2,7 @@ mod library;
 // use library::print_books;
 
 mod health_statistics;
+mod health_statistics_pub;
 
 #[allow(unused_variables)]
 fn main() {
@@ -73,6 +74,7 @@ fn main() {
     // TODO print_books();
 
     health_statistics::main();
+    health_statistics_pub::main();
 }
 
 // Everything is private by default, `pub` makes it public.
