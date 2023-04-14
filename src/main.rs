@@ -1,5 +1,7 @@
 mod library;
-use library::print_books;
+// use library::print_books;
+
+mod health_statistics;
 
 #[allow(unused_variables)]
 fn main() {
@@ -67,9 +69,10 @@ fn main() {
     }
     println!("{}", multiply_number_and_string(15, "3").unwrap());
 
-    // https://google.github.io/comprehensive-rust/exercises/day-1/book-library.html
     // library::print_books(); or, with the use library::print_books; on top, just:
-    print_books();
+    // TODO print_books();
+
+    health_statistics::main();
 }
 
 // Everything is private by default, `pub` makes it public.

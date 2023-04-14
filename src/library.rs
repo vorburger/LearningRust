@@ -1,3 +1,8 @@
+// https://google.github.io/comprehensive-rust/exercises/day-1/book-library.html
+
+// TODO: remove this when you're done with your implementation.
+#![allow(unused_variables, dead_code)]
+
 pub struct Library {
     books: Vec<Book>,
 }
