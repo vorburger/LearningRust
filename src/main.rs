@@ -10,12 +10,8 @@ mod luhn;
 
 mod gui;
 
+#[allow(unused_variables)]
 fn main() {
-    gui::gui_main();
-}
-
-#[allow(unused_variables, unused)] // TODO remove again later
-fn main1() {
     println!("hello, world");
 
     println!("It's OK to use 🥰 Unicode¡");
@@ -85,6 +81,8 @@ fn main1() {
 
     health_statistics::main();
     health_statistics_pub::main();
+
+    gui::gui_main();
 }
 
 // Everything is private by default, `pub` makes it public.
