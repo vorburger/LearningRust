@@ -8,8 +8,14 @@ mod health_statistics_pub;
 
 mod luhn;
 
-#[allow(unused_variables)]
+mod gui;
+
 fn main() {
+    gui::gui_main();
+}
+
+#[allow(unused_variables, unused)] // TODO remove again later
+fn main1() {
     println!("hello, world");
 
     println!("It's OK to use 🥰 Unicode¡");
