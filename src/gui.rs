@@ -64,31 +64,44 @@ impl Window {
 
 impl Widget for Label {
     fn width(&self) -> usize {
-        unimplemented!()
+        self.label.len()
     }
 
     fn draw_into(&self, buffer: &mut dyn std::fmt::Write) {
-        unimplemented!()
+        writeln!(buffer, "{}", &self.label).unwrap();
     }
 }
 
 impl Widget for Button {
     fn width(&self) -> usize {
-        unimplemented!()
+        self.label.width() + 4
     }
 
     fn draw_into(&self, buffer: &mut dyn std::fmt::Write) {
-        unimplemented!()
+        writeln!(buffer, "| {} |", &self.label.label).unwrap();
     }
 }
 
 impl Widget for Window {
     fn width(&self) -> usize {
-        unimplemented!()
+        self.widgets
+            .iter()
+            .map(|widget| widget.width())
+            .max()
+            .unwrap_or(0)
+            + 4
     }
 
     fn draw_into(&self, buffer: &mut dyn std::fmt::Write) {
-        unimplemented!()
+        let width = self.width();
+        let iwidth = width - 4;
+        writeln!(buffer, "{:=<width$}", "").unwrap();
+        writeln!(buffer, "| {:*^iwidth$} |", &self.title).unwrap();
+        writeln!(buffer, "{:=<width$}", "").unwrap();
+
+        for widget in &self.widgets {
+            widget.draw_into(buffer);
+        }
     }
 }
 
