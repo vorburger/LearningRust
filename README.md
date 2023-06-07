@@ -4,6 +4,7 @@ This is a git repository started by [Michael Vorburger.ch](http://www.vorburger.
 
 * [comprehensive-rust](https://google.github.io/comprehensive-rust) (generated from [comprehensive-rust.git](https://github.com/google/comprehensive-rust)) is a great tutorial to get started with Rust!
 * [Rust by Example](https://doc.rust-lang.org/rust-by-example/) (RBE) is another good way to get started.
+* [Rust Cheat Sheet](https://github.com/teivah/rust-cheatsheet/blob/master/src/main.rs) by teivah@ is another great resource
 
 Install Rust using https://rustup.rs (into `~/.rustup` and `~/.cargo`; uninstall via `rustup self uninstall`), and install [the Rust VSC plugin](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer), and do:
 
